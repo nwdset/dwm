@@ -232,9 +232,9 @@ static Key keys[] = {
 	/* { MODKEY,			XK_period,	spawn,		SHCMD("mpc next") }, */
 	/* { MODKEY|ShiftMask,		XK_period,	spawn,		SHCMD("mpc repeat") }, */
 
-	{ MODKEY,			XK_comma,	shifttag,	{.i = -1 } },
+	/* { MODKEY,			XK_comma,	shifttag,	{.i = -1 } }, */
 	{ MODKEY|ShiftMask,		XK_comma,	tagmon,		{.i = -1 } },
-	{ MODKEY,			XK_period,	shifttag,	{.i = +1 } },
+	/* { MODKEY,			XK_period,	shifttag,	{.i = +1 } }, */
 	{ MODKEY|ShiftMask,		XK_period,	tagmon,		{.i = +1 } },
 
 	{ MODKEY,			XK_Page_Up,	shiftview,	{ .i = -1 } },
