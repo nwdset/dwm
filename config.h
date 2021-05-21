@@ -204,12 +204,12 @@ static Key keys[] = {
 	{ MODKEY,			XK_f,		togglefullscr,	{0} },
 	{ MODKEY|ShiftMask,		XK_f,		setlayout,	{.v = &layouts[8]} },
 	{ MODKEY,			XK_bracketleft,		shiftview,	{ .i = -1 } },
-	{ MODKEY|ShiftMask,		XK_bracketleft,		shifttag,	{ .i = -1 } },
+	{ MODKEY|ShiftMask,		XK_bracketleft,		focusmon,	{ .i = -1 } },
 	{ MODKEY,			XK_h,		setmfact,	{.f = -0.05} },
 	/* J and K are automatically bound above in STACKEYS */
 	{ MODKEY,			XK_l,		setmfact,      	{.f = +0.05} },
 	{ MODKEY,			XK_bracketright,	shiftview,	{ .i = 1 } },
-	{ MODKEY|ShiftMask,		XK_bracketright,	shifttag,	{ .i = 1 } },
+	{ MODKEY|ShiftMask,		XK_bracketright,	focusmon,	{ .i = 1 } },
 	{ MODKEY,			XK_apostrophe,	togglescratch,	{.ui = 1} },
 	/* { MODKEY|ShiftMask,		XK_apostrophe,	spawn,		SHCMD("") }, */
 	{ MODKEY,			XK_Return,	spawn,		{.v = termcmd } },
@@ -232,9 +232,9 @@ static Key keys[] = {
 	/* { MODKEY,			XK_period,	spawn,		SHCMD("mpc next") }, */
 	/* { MODKEY|ShiftMask,		XK_period,	spawn,		SHCMD("mpc repeat") }, */
 
-	{ MODKEY,			XK_comma,	focusmon,	{.i = -1 } },
+	{ MODKEY,			XK_comma,	shifttag,	{.i = -1 } },
 	{ MODKEY|ShiftMask,		XK_comma,	tagmon,		{.i = -1 } },
-	{ MODKEY,			XK_period,	focusmon,	{.i = +1 } },
+	{ MODKEY,			XK_period,	shifttag,	{.i = +1 } },
 	{ MODKEY|ShiftMask,		XK_period,	tagmon,		{.i = +1 } },
 
 	{ MODKEY,			XK_Page_Up,	shiftview,	{ .i = -1 } },
