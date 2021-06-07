@@ -2465,7 +2465,7 @@ warp(const Client *c)
 	int x, y;
 
 	if (!c) {
-		XWarpPointer(dpy, None, root, 0, 0, 0, 0, selmon->wx + selmon->ww, selmon->wy + selmon->wh);
+		XWarpPointer(dpy, None, root, 0, 0, 0, 0, selmon->wx + selmon->ww/1.05, selmon->wy + selmon->wh/1.05);
 		return;
 	}
 
@@ -2478,7 +2478,7 @@ warp(const Client *c)
 		(c->mon->topbar && !y))
 		return;
 
-	XWarpPointer(dpy, None, c->win, 0, 0, 0, 0, c->w, c->h);
+	XWarpPointer(dpy, None, c->win, 0, 0, 0, 0, c->w / 1.05, c->h / 1.05);
 }
 
 Client *
