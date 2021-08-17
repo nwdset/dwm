@@ -161,9 +161,9 @@ static Key keys[] = {
 	/* TAGKEYS(			XK_9,		8) */
 	/* { MODKEY,			XK_0,		view,		{.ui = ~0 } }, */
 	/* { MODKEY|ShiftMask,		XK_0,		tag,		{.ui = ~0 } }, */
-	/* { MODKEY,			XK_minus,	spawn,		SHCMD("pamixer --allow-boost -d 5; kill -44 $(pidof dwmblocks)") }, */
+	{ MODKEY,			XK_minus,	focusmon,		{ .i = -1 } },
 	/* { MODKEY|ShiftMask,		XK_minus,	spawn,		SHCMD("pamixer --allow-boost -d 15; kill -44 $(pidof dwmblocks)") }, */
-	/* { MODKEY,			XK_equal,	spawn,		SHCMD("pamixer --allow-boost -i 5; kill -44 $(pidof dwmblocks)") }, */
+	{ MODKEY,			XK_equal,	focusmon,		{ .i = +1 } },
 	/* { MODKEY|ShiftMask,		XK_equal,	spawn,		SHCMD("pamixer --allow-boost -i 15; kill -44 $(pidof dwmblocks)") }, */
 	{ MODKEY,			XK_BackSpace,	spawn,		SHCMD("sysact") },
 	{ MODKEY|ShiftMask,		XK_BackSpace,	spawn,		SHCMD("sysact") },
@@ -205,12 +205,12 @@ static Key keys[] = {
 	{ MODKEY,			XK_f,		togglefullscr,	{0} },
 	{ MODKEY|ShiftMask,		XK_f,		setlayout,	{.v = &layouts[8]} },
 	{ MODKEY,			XK_bracketleft,		shiftview,	{ .i = -1 } },
-	{ MODKEY|ShiftMask,		XK_bracketleft,		focusmon,	{ .i = -1 } },
+	/* { MODKEY|ShiftMask,		XK_bracketleft,		focusmon,	{ .i = -1 } }, */
 	{ MODKEY,			XK_h,		setmfact,	{.f = -0.05} },
 	/* J and K are automatically bound above in STACKEYS */
 	{ MODKEY,			XK_l,		setmfact,      	{.f = +0.05} },
 	{ MODKEY,			XK_bracketright,	shiftview,	{ .i = 1 } },
-	{ MODKEY|ShiftMask,		XK_bracketright,	focusmon,	{ .i = 1 } },
+	/* { MODKEY|ShiftMask,		XK_bracketright,	focusmon,	{ .i = 1 } }, */
 	{ MODKEY,			XK_apostrophe,	togglescratch,	{.ui = 1} },
 	/* { MODKEY|ShiftMask,		XK_apostrophe,	spawn,		SHCMD("") }, */
 	{ MODKEY,			XK_Return,	spawn,		{.v = termcmd } },
@@ -233,9 +233,9 @@ static Key keys[] = {
 	/* { MODKEY,			XK_period,	spawn,		SHCMD("mpc next") }, */
 	/* { MODKEY|ShiftMask,		XK_period,	spawn,		SHCMD("mpc repeat") }, */
 
-	/* { MODKEY,			XK_comma,	shifttag,	{.i = -1 } }, */
+	/* { MODKEY,			XK_comma,	focusmon,	{.i = -1 } }, */
 	{ MODKEY|ShiftMask,		XK_comma,	tagmon,		{.i = -1 } },
-	/* { MODKEY,			XK_period,	shifttag,	{.i = +1 } }, */
+	/* { MODKEY,			XK_period,	focusmon,	{.i = +1 } }, */
 	{ MODKEY|ShiftMask,		XK_period,	tagmon,		{.i = +1 } },
 
 	{ MODKEY,			XK_Page_Up,	shiftview,	{ .i = -1 } },
