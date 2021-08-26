@@ -161,9 +161,9 @@ static Key keys[] = {
 	/* TAGKEYS(			XK_9,		8) */
 	/* { MODKEY,			XK_0,		view,		{.ui = ~0 } }, */
 	/* { MODKEY|ShiftMask,		XK_0,		tag,		{.ui = ~0 } }, */
-	{ MODKEY,			XK_minus,	focusmon,		{ .i = -1 } },
+	/* { MODKEY,			XK_F10,	focusmon,		{ .i = -1 } }, */
 	/* { MODKEY|ShiftMask,		XK_minus,	spawn,		SHCMD("pamixer --allow-boost -d 15; kill -44 $(pidof dwmblocks)") }, */
-	{ MODKEY,			XK_equal,	focusmon,		{ .i = +1 } },
+	/* { MODKEY,			XK_F11,	focusmon,		{ .i = +1 } }, */
 	/* { MODKEY|ShiftMask,		XK_equal,	spawn,		SHCMD("pamixer --allow-boost -i 15; kill -44 $(pidof dwmblocks)") }, */
 	{ MODKEY,			XK_BackSpace,	spawn,		SHCMD("sysact") },
 	{ MODKEY|ShiftMask,		XK_BackSpace,	spawn,		SHCMD("sysact") },
@@ -204,13 +204,13 @@ static Key keys[] = {
 	/* { MODKEY,			XK_d,		spawn,		SHCMD("") } }, */
 	{ MODKEY,			XK_f,		togglefullscr,	{0} },
 	{ MODKEY|ShiftMask,		XK_f,		setlayout,	{.v = &layouts[8]} },
-	{ MODKEY,			XK_bracketleft,		shiftview,	{ .i = -1 } },
-	/* { MODKEY|ShiftMask,		XK_bracketleft,		focusmon,	{ .i = -1 } }, */
+	{ MODKEY,			XK_g,		shiftview,	{ .i = -1 } },
+	{ MODKEY|ShiftMask,		XK_bracketleft,		focusmon,	{ .i = -1 } },
 	{ MODKEY,			XK_h,		setmfact,	{.f = -0.05} },
 	/* J and K are automatically bound above in STACKEYS */
 	{ MODKEY,			XK_l,		setmfact,      	{.f = +0.05} },
-	{ MODKEY,			XK_bracketright,	shiftview,	{ .i = 1 } },
-	/* { MODKEY|ShiftMask,		XK_bracketright,	focusmon,	{ .i = 1 } }, */
+	{ MODKEY,			XK_semicolon,	shiftview,	{ .i = 1 } },
+	{ MODKEY|ShiftMask,		XK_bracketright,	focusmon,	{ .i = 1 } },
 	{ MODKEY,			XK_apostrophe,	togglescratch,	{.ui = 1} },
 	/* { MODKEY|ShiftMask,		XK_apostrophe,	spawn,		SHCMD("") }, */
 	{ MODKEY,			XK_Return,	spawn,		{.v = termcmd } },
@@ -219,7 +219,7 @@ static Key keys[] = {
 	/* { MODKEY|ShiftMask,		XK_z,		spawn,		SHCMD("") }, */
 	{ MODKEY,			XK_x,		incrgaps,	{.i = -3 } },
 	/* { MODKEY|ShiftMask,		XK_x,		spawn,		SHCMD("") }, */
-	/* { MODKEY,			XK_c,		spawn,		SHCMD("") }, */
+	{ MODKEY,			XK_c,		spawn,		SHCMD("code") },
 	/* { MODKEY|ShiftMask,		XK_c,		spawn,		SHCMD("") }, */
 	/* V is automatically bound above in STACKKEYS */
 	{ MODKEY,			XK_b,		togglebar,	{0} },
