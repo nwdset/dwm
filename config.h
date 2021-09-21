@@ -188,7 +188,7 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,		XK_i,		setlayout,	{.v = &layouts[7]} }, /* centeredfloatingmaster */
 	/* { MODKEY,			XK_o,		incnmaster,     {.i = +1 } }, */
 	/* { MODKEY|ShiftMask,		XK_o,		incnmaster,     {.i = -1 } }, */
-	/* { MODKEY,			XK_p,			spawn,		SHCMD("mpc toggle") }, */
+	/* { MODKEY,			XK_p,			spawn,		SHCMD("maim -s | xclip -selection -t clipboard -t image/png") }, */
 	/* { MODKEY|ShiftMask,		XK_p,			spawn,		SHCMD("mpc pause ; pauseallmpv") }, */
 	/* { MODKEY,			XK_bracketleft,		spawn,		SHCMD("mpc seek -10") }, */
 	/* { MODKEY|ShiftMask,		XK_bracketleft,		spawn,		SHCMD("mpc seek -60") }, */
