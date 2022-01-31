@@ -205,12 +205,12 @@ static Key keys[] = {
 	{ MODKEY,			XK_f,		togglefullscr,	{0} },
 	{ MODKEY|ShiftMask,		XK_f,		setlayout,	{.v = &layouts[8]} },
 	{ MODKEY,			XK_g,		shiftview,	{ .i = -1 } },
-	{ MODKEY|ShiftMask,		XK_bracketleft,		focusmon,	{ .i = -1 } },
+	{ MODKEY|ShiftMask,		XK_bracketleft,		focusmon,	{ .i = 1 } },
 	{ MODKEY,			XK_h,		setmfact,	{.f = -0.05} },
 	/* J and K are automatically bound above in STACKEYS */
 	{ MODKEY,			XK_l,		setmfact,      	{.f = +0.05} },
 	{ MODKEY,			XK_semicolon,	shiftview,	{ .i = 1 } },
-	{ MODKEY|ShiftMask,		XK_bracketright,	focusmon,	{ .i = 1 } },
+	{ MODKEY|ShiftMask,		XK_bracketright,	focusmon,	{ .i = -1 } },
 	{ MODKEY,			XK_apostrophe,	togglescratch,	{.ui = 1} },
 	/* { MODKEY|ShiftMask,		XK_apostrophe,	spawn,		SHCMD("") }, */
 	{ MODKEY,			XK_Return,	spawn,		{.v = termcmd } },
